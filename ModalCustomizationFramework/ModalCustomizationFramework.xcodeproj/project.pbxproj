@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A9607426AB080100A2D25E /* ModalTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9607326AB080100A2D25E /* ModalTransitionDelegate.m */; };
+		39A9607C26AB082700A2D25E /* ModalTransitioningDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9607726AB082700A2D25E /* ModalTransitioningDelegate.h */; };
+		39A9607E26AB082700A2D25E /* ModalViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9607926AB082700A2D25E /* ModalViewController.h */; };
+		39A9607F26AB082700A2D25E /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9607A26AB082700A2D25E /* ModalViewController.m */; };
+		39A9608E26AB087A00A2D25E /* ModalPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9608C26AB087A00A2D25E /* ModalPresenter.h */; };
+		39A9608F26AB087A00A2D25E /* ModalPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9608D26AB087A00A2D25E /* ModalPresenter.m */; };
 		EF5FC42726A86795003AC036 /* ModalCustomizationFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5FC41D26A86795003AC036 /* ModalCustomizationFramework.framework */; };
 		EF5FC42C26A86795003AC036 /* ModalCustomizationFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5FC42B26A86795003AC036 /* ModalCustomizationFrameworkTests.m */; };
 		EF5FC42E26A86795003AC036 /* ModalCustomizationFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5FC42026A86795003AC036 /* ModalCustomizationFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF5FC43C26A86885003AC036 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5FC43B26A86885003AC036 /* ModalViewController.m */; };
-		EF5FC43E26A86898003AC036 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5FC43D26A86898003AC036 /* NavigationViewController.m */; };
-		EF5FC44226A8692A003AC036 /* ModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5FC44126A8692A003AC036 /* ModalView.m */; };
-		EF5FC44426A86937003AC036 /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5FC44326A86937003AC036 /* BlurView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,20 +29,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39A9607326AB080100A2D25E /* ModalTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalTransitionDelegate.m; sourceTree = "<group>"; };
+		39A9607726AB082700A2D25E /* ModalTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalTransitioningDelegate.h; sourceTree = "<group>"; };
+		39A9607926AB082700A2D25E /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		39A9607A26AB082700A2D25E /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		39A9608C26AB087A00A2D25E /* ModalPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalPresenter.h; sourceTree = "<group>"; };
+		39A9608D26AB087A00A2D25E /* ModalPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalPresenter.m; sourceTree = "<group>"; };
 		EF5FC41D26A86795003AC036 /* ModalCustomizationFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModalCustomizationFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5FC42026A86795003AC036 /* ModalCustomizationFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalCustomizationFramework.h; sourceTree = "<group>"; };
 		EF5FC42126A86795003AC036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF5FC42626A86795003AC036 /* ModalCustomizationFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalCustomizationFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5FC42B26A86795003AC036 /* ModalCustomizationFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalCustomizationFrameworkTests.m; sourceTree = "<group>"; };
 		EF5FC42D26A86795003AC036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF5FC43926A86847003AC036 /* ModalViewControllerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewControllerHeader.h; sourceTree = "<group>"; };
-		EF5FC43A26A86860003AC036 /* NavigationViewControllerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationViewControllerHeader.h; sourceTree = "<group>"; };
-		EF5FC43B26A86885003AC036 /* ModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
-		EF5FC43D26A86898003AC036 /* NavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
-		EF5FC43F26A86904003AC036 /* ModalViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewHeader.h; sourceTree = "<group>"; };
-		EF5FC44026A8691A003AC036 /* BlurViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurViewHeader.h; sourceTree = "<group>"; };
-		EF5FC44126A8692A003AC036 /* ModalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalView.m; sourceTree = "<group>"; };
-		EF5FC44326A86937003AC036 /* BlurView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39A9608B26AB086E00A2D25E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				39A9608C26AB087A00A2D25E /* ModalPresenter.h */,
+				39A9608D26AB087A00A2D25E /* ModalPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		EF5FC41326A86795003AC036 = {
 			isa = PBXGroup;
 			children = (
@@ -83,8 +92,8 @@
 		EF5FC41F26A86795003AC036 /* ModalCustomizationFramework */ = {
 			isa = PBXGroup;
 			children = (
+				39A9608B26AB086E00A2D25E /* Presenter */,
 				EF5FC43826A867DD003AC036 /* Controller */,
-				EF5FC43726A867D3003AC036 /* View */,
 				EF5FC42026A86795003AC036 /* ModalCustomizationFramework.h */,
 				EF5FC42126A86795003AC036 /* Info.plist */,
 			);
@@ -100,24 +109,13 @@
 			path = ModalCustomizationFrameworkTests;
 			sourceTree = "<group>";
 		};
-		EF5FC43726A867D3003AC036 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EF5FC43F26A86904003AC036 /* ModalViewHeader.h */,
-				EF5FC44026A8691A003AC036 /* BlurViewHeader.h */,
-				EF5FC44126A8692A003AC036 /* ModalView.m */,
-				EF5FC44326A86937003AC036 /* BlurView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		EF5FC43826A867DD003AC036 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EF5FC43926A86847003AC036 /* ModalViewControllerHeader.h */,
-				EF5FC43A26A86860003AC036 /* NavigationViewControllerHeader.h */,
-				EF5FC43B26A86885003AC036 /* ModalViewController.m */,
-				EF5FC43D26A86898003AC036 /* NavigationViewController.m */,
+				39A9607926AB082700A2D25E /* ModalViewController.h */,
+				39A9607A26AB082700A2D25E /* ModalViewController.m */,
+				39A9607726AB082700A2D25E /* ModalTransitioningDelegate.h */,
+				39A9607326AB080100A2D25E /* ModalTransitionDelegate.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -129,7 +127,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A9608E26AB087A00A2D25E /* ModalPresenter.h in Headers */,
 				EF5FC42E26A86795003AC036 /* ModalCustomizationFramework.h in Headers */,
+				39A9607C26AB082700A2D25E /* ModalTransitioningDelegate.h in Headers */,
+				39A9607E26AB082700A2D25E /* ModalViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,10 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF5FC43E26A86898003AC036 /* NavigationViewController.m in Sources */,
-				EF5FC44426A86937003AC036 /* BlurView.m in Sources */,
-				EF5FC44226A8692A003AC036 /* ModalView.m in Sources */,
-				EF5FC43C26A86885003AC036 /* ModalViewController.m in Sources */,
+				39A9608F26AB087A00A2D25E /* ModalPresenter.m in Sources */,
+				39A9607F26AB082700A2D25E /* ModalViewController.m in Sources */,
+				39A9607426AB080100A2D25E /* ModalTransitionDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,9 +376,10 @@
 		EF5FC43226A86795003AC036 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2UZ6YPHV3D;
+				DEVELOPMENT_TEAM = 975J2YVPPP;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -399,9 +400,10 @@
 		EF5FC43326A86795003AC036 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2UZ6YPHV3D;
+				DEVELOPMENT_TEAM = 975J2YVPPP;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
