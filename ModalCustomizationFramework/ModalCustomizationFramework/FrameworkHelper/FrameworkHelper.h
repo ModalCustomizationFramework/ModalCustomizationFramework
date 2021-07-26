@@ -5,8 +5,9 @@
 //  Created by Jhennyfer Rodrigues de Oliveira on 26/07/21.
 //
 
-#ifndef FrameworkHelper_h
-#define FrameworkHelper_h
+#import <Foundation/Foundation.h>
+@class FrameworkHelper;
+@interface  FrameworkHelper : NSObject
 
 
-#endif /* FrameworkHelper_h */
+@end
