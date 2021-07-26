@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FrameworkHelper.h"
 
 @interface ModalViewController : UIViewController
 

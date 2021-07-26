@@ -37,7 +37,7 @@
     self.navigationBar.translatesAutoresizingMaskIntoConstraints = false;
 }
 
-- (void)constraintsNavigationBar {
+- (void)constraintsNavigationBar {    
     [self.navigationBar.heightAnchor constraintEqualToConstant:43].active = YES;
     [self.navigationBar.widthAnchor constraintEqualToAnchor:self.view.widthAnchor].active = YES;
     [self.navigationBar.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
