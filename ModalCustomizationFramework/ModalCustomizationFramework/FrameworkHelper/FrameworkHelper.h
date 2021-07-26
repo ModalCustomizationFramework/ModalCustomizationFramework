@@ -6,8 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ModalTransitioningDelegate.h>
+#import <UIKit/UIKit.h>
+
 @class FrameworkHelper;
 @interface  FrameworkHelper : NSObject
 
+-(void)createModalTransitioningDelegateWithviewController:(UIViewController*)viewController
+                                 presentingViewController:(UIViewController*)presentingViewController
+                                              heightModal:(CGFloat*)heightModal;
 
 @end
