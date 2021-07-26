@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		39A9607426AB080100A2D25E /* ModalTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9607326AB080100A2D25E /* ModalTransitionDelegate.m */; };
-		39A9607C26AB082700A2D25E /* ModalTransitioningDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9607726AB082700A2D25E /* ModalTransitioningDelegate.h */; };
-		39A9607E26AB082700A2D25E /* ModalViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9607926AB082700A2D25E /* ModalViewController.h */; };
+		39A9607C26AB082700A2D25E /* ModalTransitioningDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9607726AB082700A2D25E /* ModalTransitioningDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39A9607E26AB082700A2D25E /* ModalViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9607926AB082700A2D25E /* ModalViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39A9607F26AB082700A2D25E /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9607A26AB082700A2D25E /* ModalViewController.m */; };
-		39A9608E26AB087A00A2D25E /* ModalPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9608C26AB087A00A2D25E /* ModalPresenter.h */; };
+		39A9608E26AB087A00A2D25E /* ModalPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9608C26AB087A00A2D25E /* ModalPresenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39A9608F26AB087A00A2D25E /* ModalPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9608D26AB087A00A2D25E /* ModalPresenter.m */; };
 		EF5FC42726A86795003AC036 /* ModalCustomizationFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5FC41D26A86795003AC036 /* ModalCustomizationFramework.framework */; };
 		EF5FC42C26A86795003AC036 /* ModalCustomizationFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5FC42B26A86795003AC036 /* ModalCustomizationFrameworkTests.m */; };
 		EF5FC42E26A86795003AC036 /* ModalCustomizationFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5FC42026A86795003AC036 /* ModalCustomizationFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF75E0A026AEF9AE00A52B13 /* FrameworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EF75E09F26AEF9AE00A52B13 /* FrameworkHelper.m */; };
+		EF75E0A126AEFA4300A52B13 /* FrameworkHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EF75E09E26AEF99600A52B13 /* FrameworkHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		EF5FC42626A86795003AC036 /* ModalCustomizationFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalCustomizationFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5FC42B26A86795003AC036 /* ModalCustomizationFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalCustomizationFrameworkTests.m; sourceTree = "<group>"; };
 		EF5FC42D26A86795003AC036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF75E09E26AEF99600A52B13 /* FrameworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkHelper.h; sourceTree = "<group>"; };
+		EF75E09F26AEF9AE00A52B13 /* FrameworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		EF5FC41F26A86795003AC036 /* ModalCustomizationFramework */ = {
 			isa = PBXGroup;
 			children = (
+				EF75E09D26AEF94B00A52B13 /* FrameworkHelper */,
 				39A9608B26AB086E00A2D25E /* Presenter */,
 				EF5FC43826A867DD003AC036 /* Controller */,
 				EF5FC42026A86795003AC036 /* ModalCustomizationFramework.h */,
@@ -120,6 +125,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		EF75E09D26AEF94B00A52B13 /* FrameworkHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EF75E09E26AEF99600A52B13 /* FrameworkHelper.h */,
+				EF75E09F26AEF9AE00A52B13 /* FrameworkHelper.m */,
+			);
+			path = FrameworkHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -129,6 +143,7 @@
 			files = (
 				39A9608E26AB087A00A2D25E /* ModalPresenter.h in Headers */,
 				EF5FC42E26A86795003AC036 /* ModalCustomizationFramework.h in Headers */,
+				EF75E0A126AEFA4300A52B13 /* FrameworkHelper.h in Headers */,
 				39A9607C26AB082700A2D25E /* ModalTransitioningDelegate.h in Headers */,
 				39A9607E26AB082700A2D25E /* ModalViewController.h in Headers */,
 			);
@@ -232,6 +247,7 @@
 			files = (
 				39A9608F26AB087A00A2D25E /* ModalPresenter.m in Sources */,
 				39A9607F26AB082700A2D25E /* ModalViewController.m in Sources */,
+				EF75E0A026AEF9AE00A52B13 /* FrameworkHelper.m in Sources */,
 				39A9607426AB080100A2D25E /* ModalTransitionDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +395,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 975J2YVPPP;
+				DEVELOPMENT_TEAM = 2UZ6YPHV3D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -403,7 +419,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 975J2YVPPP;
+				DEVELOPMENT_TEAM = 2UZ6YPHV3D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
