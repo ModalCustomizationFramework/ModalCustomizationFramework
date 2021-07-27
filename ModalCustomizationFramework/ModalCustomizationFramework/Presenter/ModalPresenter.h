@@ -17,6 +17,11 @@ typedef enum {
     ModalScaleStateAdjustedOnce,
 } ModalScaleState;
 
+typedef enum {
+    lightMode,
+    darkMode,
+} BlurEffectMode;
+
 @property(assign, nonatomic) BOOL isMaximized;
 @property(strong, nonatomic) UIView *dimmingView;
 @property(strong, nonatomic) UIPanGestureRecognizer *panGestureRecognizer;
@@ -24,10 +29,12 @@ typedef enum {
 @property(assign, nonatomic) CGFloat direction;
 @property(assign, nonatomic) ModalScaleState state;
 @property(assign, nonatomic) BOOL isExpansive;
+@property(assign, nonatomic) BlurEffectMode blurState;
 
 -(instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
                       presentingViewController:(UIViewController *)presentingViewController
                                modalScaleState:(ModalScaleState)modalScaleState
-                                   isExpansive:(BOOL)isExpansive;
+                                   isExpansive:(BOOL)isExpansive
+                                     blurStyle:(BlurEffectMode)blurStyle;
 
 @end

@@ -15,10 +15,12 @@
                       presentingViewController:(UIViewController *)presentingViewController
                                modalScaleState:(ModalScaleState)modalScaleState
                                    isExpansive:(BOOL)isExpansive
+                                     blurStyle:(BlurEffectMode)blurStyle
 {
     self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController];
     if (self)
     {
+        self.blurState = blurStyle;
         self.isMaximized = NO;
         self.direction = 0;
         self.state = modalScaleState;
@@ -44,7 +46,14 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.containerView.bounds.size.width, self.containerView.bounds.size.height)];
     
     // Blur Effect
-    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIBlurEffect *blurEffect;
+    
+    if (_blurState == lightMode) {
+        blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    } else {
+        blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    }
+    
     UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
     blurEffectView.frame = view.frame;
     [view addSubview:blurEffectView];
@@ -104,7 +113,7 @@
                     
                     frame.origin.y = endPoint.y + (self.containerView.bounds.size.height/2 + self.containerView.bounds.size.height/4);
                     if (frame.origin.y > 500) {
-                    self.presentedView.frame = frame;
+                        self.presentedView.frame = frame;
                     }
                 }
                     break;

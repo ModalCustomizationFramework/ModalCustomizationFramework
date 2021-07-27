@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import "ModalPresenter.h"
+#import <ModalPresenter.h>
 
 @interface ModalTransitioningDelegate : NSObject <UIViewControllerTransitioningDelegate>
 

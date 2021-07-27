@@ -6,6 +6,7 @@
 //
 
 #import "ModalTransitioningDelegate.h"
+#import "FrameworkHelper.h"
 
 @implementation ModalTransitioningDelegate
 
@@ -27,10 +28,12 @@
 -(UIPresentationController*)presentationControllerForPresentedViewController:(UIViewController*)presented
                                                     presentingViewController:(UIViewController*)presenting sourceViewController:(UIViewController *)source
 {
+    BlurEffectMode blurStyle = [FrameworkHelper.sharedInstance getStyleBlurEffect];
     return [[ModalPresenter alloc] initWithPresentedViewController:presented
                                           presentingViewController:presenting
                                                    modalScaleState:self.state
-                                                       isExpansive:self.isExpansive];
+                                                       isExpansive:self.isExpansive
+                                                         blurStyle:blurStyle];
 }
 
 @end
