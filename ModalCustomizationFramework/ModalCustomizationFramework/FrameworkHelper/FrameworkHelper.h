@@ -12,8 +12,15 @@
 @class FrameworkHelper;
 @interface  FrameworkHelper : NSObject
 
++(FrameworkHelper *)sharedInstance;
+@property(assign, nonatomic) BlurEffectMode blurStyle;
+
 -(void)createModalTransitioningDelegateWithviewController:(UIViewController*)viewController
                                  presentingViewController:(UIViewController*)presentingViewController
                                               heightModal:(CGFloat*)heightModal;
+
+-(void)setStyleBlurEffect:(BlurEffectMode)blurStyle;
+
+-(BlurEffectMode)getStyleBlurEffect;
 
 @end
