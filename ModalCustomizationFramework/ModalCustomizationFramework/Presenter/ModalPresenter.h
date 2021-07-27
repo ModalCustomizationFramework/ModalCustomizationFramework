@@ -12,6 +12,7 @@
 @interface ModalPresenter : UIPresentationController
 
 typedef enum {
+    ModalScaleStateShort,
     ModalScaleStateNormal,
     ModalScaleStateAdjustedOnce,
 } ModalScaleState;
@@ -22,7 +23,11 @@ typedef enum {
 @property(strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 @property(assign, nonatomic) CGFloat direction;
 @property(assign, nonatomic) ModalScaleState state;
+@property(assign, nonatomic) BOOL isExpansive;
 
--(instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController;
+-(instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
+                      presentingViewController:(UIViewController *)presentingViewController
+                               modalScaleState:(ModalScaleState)modalScaleState
+                                   isExpansive:(BOOL)isExpansive;
 
 @end

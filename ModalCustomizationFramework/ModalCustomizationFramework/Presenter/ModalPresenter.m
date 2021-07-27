@@ -11,12 +11,18 @@
 
 @implementation ModalPresenter
 
--(instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController {
+-(instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
+                      presentingViewController:(UIViewController *)presentingViewController
+                               modalScaleState:(ModalScaleState)modalScaleState
+                                   isExpansive:(BOOL)isExpansive
+{
     self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController];
-    if (self) {
+    if (self)
+    {
         self.isMaximized = NO;
         self.direction = 0;
-        self.state = normal;
+        self.state = modalScaleState;
+        self.isExpansive = isExpansive;
         self.panGestureRecognizer = [[UIPanGestureRecognizer alloc] init];
         [self.panGestureRecognizer addTarget:self action:@selector(onPan:)];
         self.tapGestureRecognizer = UITapGestureRecognizer.new;
@@ -28,8 +34,10 @@
 }
 
 // blur view
--(UIView*) dimmingView {
-    if(_dimmingView) {
+-(UIView*) dimmingView
+{
+    if(_dimmingView)
+    {
         return _dimmingView;
     }
     
@@ -51,16 +59,36 @@
     return view;
 }
 
-- (CGRect) frameOfPresentedViewInContainerView {
-    return CGRectMake(0, self.containerView.bounds.size.height/2, self.containerView.bounds.size.width, self.containerView.bounds.size.height/2);
+- (CGRect) frameOfPresentedViewInContainerView
+{
+    switch (self.state) {
+        case ModalScaleStateShort: {
+            return CGRectMake(0, (self.containerView.bounds.size.height/2 + self.containerView.bounds.size.height/4), self.containerView.bounds.size.width, self.containerView.bounds.size.height/3);
+        }
+            break;
+        case ModalScaleStateNormal: {
+            return CGRectMake(0, self.containerView.bounds.size.height/2, self.containerView.bounds.size.width, self.containerView.bounds.size.height/2);
+        }
+            break;
+        case ModalScaleStateAdjustedOnce: {
+            return CGRectMake(0, self.containerView.bounds.size.height/5, self.containerView.bounds.size.width, self.containerView.bounds.size.height);
+        }
+        default:
+            break;
+    }
+    
 }
 
--(void)onTap:(UITapGestureRecognizer*)tap{
+-(void)onTap:(UITapGestureRecognizer*)tap
+{
     [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)onPan:(UIPanGestureRecognizer*)pan{
+-(void)onPan:(UIPanGestureRecognizer*)pan
+{
     CGPoint endPoint = [pan translationInView:pan.view.superview];
+    CGPoint endHeight = [pan locationInView:pan.view.superview];
+    CGFloat beginHeight = self.presentedView.frame.size.height;
     switch (pan.state) {
         case UIGestureRecognizerStateBegan: {
             CGRect frame = self.presentedView.frame;
@@ -70,8 +98,16 @@
             break;
         case UIGestureRecognizerStateChanged: {
             CGPoint velocity = [pan velocityInView: pan.view.superview];
-            
             switch(self.state) {
+                case ModalScaleStateShort: {
+                    CGRect frame = self.presentedView.frame;
+                    
+                    frame.origin.y = endPoint.y + (self.containerView.bounds.size.height/2 + self.containerView.bounds.size.height/4);
+                    if (frame.origin.y > 500) {
+                    self.presentedView.frame = frame;
+                    }
+                }
+                    break;
                 case ModalScaleStateNormal: {
                     CGRect frame = self.presentedView.frame;
                     frame.origin.y = endPoint.y + self.containerView.frame.size.height/2;
@@ -86,13 +122,20 @@
                     break;
             }
             self.direction = velocity.y;
+            printf("-> %f  (%f,%f)\n", self.direction, endHeight.x, endHeight.y);
         }
             break;
         case UIGestureRecognizerStateEnded: {
+            printf("End-> %f  (%f) = (%f,%f)\n", self.direction, beginHeight, endHeight.x, endHeight.y);
             if(self.direction < 0) {
-                [self changeScale:ModalScaleStateAdjustedOnce];
+                if (self.isExpansive) {
+                    [self changeScale:ModalScaleStateAdjustedOnce];
+                } else {
+                    printf("AQUI\n");
+                    [self changeScale:self.state];
+                }
             } else {
-                if (self.state == ModalScaleStateAdjustedOnce) {
+                if (self.state == ModalScaleStateAdjustedOnce && self.isExpansive) {
                     [self changeScale:ModalScaleStateNormal];
                 } else {
                     [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
@@ -122,7 +165,8 @@
         
         CGRect containerFrame = containerView.frame;
         CGRect halfFrame = CGRectMake(0, containerFrame.size.height/2, containerFrame.size.width, containerFrame.size.height/2);
-        CGRect frame = (newState == ModalScaleStateAdjustedOnce) ? CGRectMake(0, 100, containerFrame.size.width,  containerFrame.size.height) : halfFrame;
+        CGRect shortFrame = (newState == ModalScaleStateShort) ? CGRectMake(0, (containerFrame.size.height/2 + containerFrame.size.height/4), containerFrame.size.width, containerFrame.size.height/3) : halfFrame;
+        CGRect frame = (newState == ModalScaleStateAdjustedOnce) ? CGRectMake(0, 100, containerFrame.size.width,  containerFrame.size.height) : shortFrame;
         presentedView.frame = frame;
         
         if([self.presentedViewController isKindOfClass:[UINavigationController class]]) {
@@ -182,3 +226,5 @@
 }
 
 @end
+
+
