@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ModalTransitioningDelegate.h>
+#import "ModalTransitioningDelegate.h"
 #import <UIKit/UIKit.h>
 
 @class FrameworkHelper;
@@ -14,13 +14,20 @@
 
 +(FrameworkHelper *)sharedInstance;
 @property(assign, nonatomic) BlurEffectMode blurStyle;
+@property(assign, nonatomic) ModalScaleState modalStyle;
+@property(assign, nonatomic) BOOL isExpansive;
 
--(void)createModalTransitioningDelegateWithviewController:(UIViewController*)viewController
-                                 presentingViewController:(UIViewController*)presentingViewController
-                                              heightModal:(CGFloat*)heightModal;
 
 -(void)setStyleBlurEffect:(BlurEffectMode)blurStyle;
 
 -(BlurEffectMode)getStyleBlurEffect;
+
+- (void)setModalScaleState:(ModalScaleState)modalScaleState;
+
+- (ModalScaleState)getModalScaleState;
+
+-(void)setIsModalExpansive:(BOOL)isExpansive;
+
+-(BOOL)getIsModalExpansive;
 
 @end

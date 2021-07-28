@@ -12,15 +12,11 @@
 
 -(instancetype)initWithViewController:(UIViewController*)viewController
              presentingViewController:(UIViewController*)presentingViewController
-                      modalScaleState:(ModalScaleState)modalScaleState
-                          isExpansive:(BOOL)isExpansive
 {
     if(self = [super init])
     {
         self.viewController = viewController;
         self.presentingViewController = presentingViewController;
-        self.state = modalScaleState;
-        self.isExpansive = isExpansive;
     }
     return self;
 }
@@ -29,10 +25,12 @@
                                                     presentingViewController:(UIViewController*)presenting sourceViewController:(UIViewController *)source
 {
     BlurEffectMode blurStyle = [FrameworkHelper.sharedInstance getStyleBlurEffect];
+    ModalScaleState modalScaleState = [FrameworkHelper.sharedInstance getModalScaleState];
+    BOOL isExpansive = [FrameworkHelper.sharedInstance getIsModalExpansive];
     return [[ModalPresenter alloc] initWithPresentedViewController:presented
                                           presentingViewController:presenting
-                                                   modalScaleState:self.state
-                                                       isExpansive:self.isExpansive
+                                                   modalScaleState:modalScaleState
+                                                       isExpansive:isExpansive
                                                          blurStyle:blurStyle];
 }
 
