@@ -17,10 +17,11 @@ selecione **Branch** e aperte em **next**
 ## Como utilizar?
 
 1. Faça o download do [projeto de exemplo](https://github.com/ModalCustomizationFramework/Example)
-2. Navegue até o arquivo nomeado **TriggerButtonViewController.m**
-3. Importe o framework
+2. Navegue até o arquivo nomeado **TriggerButtonViewController.h**
+3. Importe o framework e adicione uma nova propriedade
 ~~~objective-c
 #import <ModalCustomizationFramework/ModalCustomizationFramework.h>
+@property (nonatomic,retain) ModalTransitioningDelegate *modalTransitioningDelegate;
 ~~~
 4. Vamos fazer modificações na seguinte função 
 ~~~objective-c
@@ -48,11 +49,13 @@ selecione **Branch** e aperte em **next**
                                                                           presentingViewController: navigationController];
 ~~~
 
-8. A ViewController da modal que será apresentada está contida em uma Navigation Controller
+8. A ViewController da modal que será apresentada está contida em uma Navigation Controller, então por meio dela vamos colocar o modo de 
+   apresentação da modal para custom. O transitioning delegate será responsável por instanciar a view que será apresentada por meio da
+   Presentetion Controller.
+   
 ~~~objective-c
     navigationController.modalPresentationStyle = UIModalPresentationCustom;
     navigationController.transitioningDelegate = self.modalTransitioningDelegate;
-    [self presentViewController:navigationController animated:YES completion:nil];
 ~~~
 
     
