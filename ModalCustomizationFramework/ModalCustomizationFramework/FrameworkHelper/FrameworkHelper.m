@@ -9,6 +9,8 @@
 @implementation FrameworkHelper
 
 @synthesize blurStyle;
+@synthesize modalStyle;
+@synthesize isExpansive;
 + (instancetype)sharedInstance
 {
     static FrameworkHelper *sharedInstance = nil;
@@ -18,14 +20,10 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[FrameworkHelper alloc] init];
         sharedInstance.blurStyle = lightMode;
+        sharedInstance.modalStyle = ModalScaleStateNormal;
+        sharedInstance.isExpansive = YES;
     });
     return sharedInstance;
-}
-
--(void)createModalTransitioningDelegateWithviewController:(UIViewController*)viewController
-                                      presentingViewController:(UIViewController*)presentingViewController
-                                                   heightModal:(CGFloat*)heightModal {
-    
 }
 
 - (void)setStyleBlurEffect:(BlurEffectMode)blurStyle {
@@ -36,6 +34,20 @@
     return blurStyle;
 }
 
+- (void)setModalScaleState:(ModalScaleState)modalScaleState {
+    self.modalStyle = modalScaleState;
+}
 
+- (ModalScaleState)getModalScaleState {
+    return modalStyle;
+}
 
+- (void)setIsModalExpansive:(BOOL)isExpansive {
+    self.isExpansive = isExpansive;
+}
+
+- (BOOL)getIsModalExpansive {
+    return self.isExpansive;
+}
 @end
+
