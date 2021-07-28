@@ -28,6 +28,8 @@ typedef enum {
 @property(strong, nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 @property(assign, nonatomic) CGFloat direction;
 @property(assign, nonatomic) ModalScaleState state;
+@property(assign, nonatomic) ModalScaleState initialState;
+@property(assign, nonatomic) BOOL auxState;
 @property(assign, nonatomic) BOOL isExpansive;
 @property(assign, nonatomic) BlurEffectMode blurState;
 
