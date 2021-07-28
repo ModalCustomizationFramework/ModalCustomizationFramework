@@ -16,6 +16,8 @@
 		EF5FC42E26A86795003AC036 /* ModalCustomizationFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5FC42026A86795003AC036 /* ModalCustomizationFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF75E0A026AEF9AE00A52B13 /* FrameworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EF75E09F26AEF9AE00A52B13 /* FrameworkHelper.m */; };
 		EF75E0A126AEFA4300A52B13 /* FrameworkHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EF75E09E26AEF99600A52B13 /* FrameworkHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF75E11626B0E45900A52B13 /* ModalCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = EF75E11426B0E45900A52B13 /* ModalCustomization.m */; };
+		EF75E11726B0E45900A52B13 /* ModalCustomization.h in Headers */ = {isa = PBXBuildFile; fileRef = EF75E11526B0E45900A52B13 /* ModalCustomization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		EF5FC42D26A86795003AC036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF75E09E26AEF99600A52B13 /* FrameworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkHelper.h; sourceTree = "<group>"; };
 		EF75E09F26AEF9AE00A52B13 /* FrameworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkHelper.m; sourceTree = "<group>"; };
+		EF75E11426B0E45900A52B13 /* ModalCustomization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalCustomization.m; sourceTree = "<group>"; };
+		EF75E11526B0E45900A52B13 /* ModalCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalCustomization.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 		EF5FC41F26A86795003AC036 /* ModalCustomizationFramework */ = {
 			isa = PBXGroup;
 			children = (
+				EF75E11326B0E45900A52B13 /* ModalCustomization */,
 				EF75E09D26AEF94B00A52B13 /* FrameworkHelper */,
 				39A9608B26AB086E00A2D25E /* Presenter */,
 				EF5FC43826A867DD003AC036 /* Controller */,
@@ -128,6 +133,15 @@
 			path = FrameworkHelper;
 			sourceTree = "<group>";
 		};
+		EF75E11326B0E45900A52B13 /* ModalCustomization */ = {
+			isa = PBXGroup;
+			children = (
+				EF75E11426B0E45900A52B13 /* ModalCustomization.m */,
+				EF75E11526B0E45900A52B13 /* ModalCustomization.h */,
+			);
+			path = ModalCustomization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -138,6 +152,7 @@
 				39A9608E26AB087A00A2D25E /* ModalPresenter.h in Headers */,
 				EF5FC42E26A86795003AC036 /* ModalCustomizationFramework.h in Headers */,
 				EF75E0A126AEFA4300A52B13 /* FrameworkHelper.h in Headers */,
+				EF75E11726B0E45900A52B13 /* ModalCustomization.h in Headers */,
 				39A9607C26AB082700A2D25E /* ModalTransitioningDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39A9608F26AB087A00A2D25E /* ModalPresenter.m in Sources */,
+				EF75E11626B0E45900A52B13 /* ModalCustomization.m in Sources */,
 				EF75E0A026AEF9AE00A52B13 /* FrameworkHelper.m in Sources */,
 				39A9607426AB080100A2D25E /* ModalTransitioningDelegate.m in Sources */,
 			);
@@ -387,7 +403,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 975J2YVPPP;
+				DEVELOPMENT_TEAM = 2UZ6YPHV3D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -411,7 +427,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 975J2YVPPP;
+				DEVELOPMENT_TEAM = 2UZ6YPHV3D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
