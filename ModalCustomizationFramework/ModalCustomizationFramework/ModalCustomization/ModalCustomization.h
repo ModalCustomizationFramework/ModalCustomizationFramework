@@ -14,7 +14,10 @@
 @property(assign, nonatomic) BlurEffectMode blurStyle;
 
 
--(void)setModalBlurEffectStyle:(BlurEffectMode)blurStyle;
+- (void)setModalBlurEffectStyle:(BlurEffectMode)blurStyle;
 
+- (void)setIsModalExpansive:(BOOL)isExpansive;
+
+- (void)setModalScaleState:(ModalScaleState)modalScaleState;
 
 @end

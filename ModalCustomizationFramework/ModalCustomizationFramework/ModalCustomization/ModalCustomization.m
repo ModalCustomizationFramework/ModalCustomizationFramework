@@ -15,4 +15,12 @@
     [FrameworkHelper.sharedInstance setBlurStyle: blurStyle ];
 }
 
+- (void)setIsModalExpansive:(BOOL)isExpansive {
+    [FrameworkHelper.sharedInstance setIsExpansive:isExpansive];
+}
+
+- (void)setModalScaleState:(ModalScaleState)modalScaleState {
+    [FrameworkHelper.sharedInstance setModalScaleState:modalScaleState];
+}
+
 @end
