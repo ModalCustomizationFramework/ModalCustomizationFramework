@@ -16,7 +16,7 @@
 }
 
 - (void)setIsModalExpansive:(BOOL)isExpansive {
-    [FrameworkHelper.sharedInstance setIsExpansive:isExpansive];
+    [FrameworkHelper.sharedInstance setIsModalExpansive:isExpansive];
 }
 
 - (void)setModalScaleState:(ModalScaleState)modalScaleState {
