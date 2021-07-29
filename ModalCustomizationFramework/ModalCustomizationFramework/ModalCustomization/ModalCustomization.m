@@ -12,7 +12,7 @@
 @implementation ModalCustomization
 
 - (void)setModalBlurEffectStyle:(BlurEffectMode)blurStyle {
-    [FrameworkHelper.sharedInstance setBlurStyle: blurStyle ];
+    [FrameworkHelper.sharedInstance setStyleBlurEffect: blurStyle ];
 }
 
 - (void)setIsModalExpansive:(BOOL)isExpansive {
