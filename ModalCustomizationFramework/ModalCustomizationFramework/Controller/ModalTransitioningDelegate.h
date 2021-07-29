@@ -14,6 +14,7 @@
 @property (strong, nonatomic) UIViewController *viewController;
 @property (strong, nonatomic) UIViewController *presentingViewController;
 
--(instancetype)initWithViewController:(UIViewController*)viewController presentingViewController:(UIViewController*)presentingViewController;
+-(instancetype)initWithViewController:(UIViewController*)viewController
+             presentingViewController:(UIViewController*)presentingViewController;
 
 @end

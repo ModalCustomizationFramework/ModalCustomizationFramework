@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39A9607426AB080100A2D25E /* ModalTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9607326AB080100A2D25E /* ModalTransitionDelegate.m */; };
-		39A9607C26AB082700A2D25E /* ModalTransitioningDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9607726AB082700A2D25E /* ModalTransitioningDelegate.h */; };
-		39A9607E26AB082700A2D25E /* ModalViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9607926AB082700A2D25E /* ModalViewController.h */; };
-		39A9607F26AB082700A2D25E /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9607A26AB082700A2D25E /* ModalViewController.m */; };
-		39A9608E26AB087A00A2D25E /* ModalPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9608C26AB087A00A2D25E /* ModalPresenter.h */; };
+		39A9607426AB080100A2D25E /* ModalTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9607326AB080100A2D25E /* ModalTransitioningDelegate.m */; };
+		39A9607C26AB082700A2D25E /* ModalTransitioningDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9607726AB082700A2D25E /* ModalTransitioningDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39A9608E26AB087A00A2D25E /* ModalPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 39A9608C26AB087A00A2D25E /* ModalPresenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		39A9608F26AB087A00A2D25E /* ModalPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A9608D26AB087A00A2D25E /* ModalPresenter.m */; };
 		EF5FC42726A86795003AC036 /* ModalCustomizationFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5FC41D26A86795003AC036 /* ModalCustomizationFramework.framework */; };
 		EF5FC42C26A86795003AC036 /* ModalCustomizationFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5FC42B26A86795003AC036 /* ModalCustomizationFrameworkTests.m */; };
 		EF5FC42E26A86795003AC036 /* ModalCustomizationFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = EF5FC42026A86795003AC036 /* ModalCustomizationFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF75E0A026AEF9AE00A52B13 /* FrameworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EF75E09F26AEF9AE00A52B13 /* FrameworkHelper.m */; };
+		EF75E0A126AEFA4300A52B13 /* FrameworkHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = EF75E09E26AEF99600A52B13 /* FrameworkHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF75E11626B0E45900A52B13 /* ModalCustomization.m in Sources */ = {isa = PBXBuildFile; fileRef = EF75E11426B0E45900A52B13 /* ModalCustomization.m */; };
+		EF75E11726B0E45900A52B13 /* ModalCustomization.h in Headers */ = {isa = PBXBuildFile; fileRef = EF75E11526B0E45900A52B13 /* ModalCustomization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,10 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		39A9607326AB080100A2D25E /* ModalTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalTransitionDelegate.m; sourceTree = "<group>"; };
+		39A9607326AB080100A2D25E /* ModalTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalTransitioningDelegate.m; sourceTree = "<group>"; };
 		39A9607726AB082700A2D25E /* ModalTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalTransitioningDelegate.h; sourceTree = "<group>"; };
-		39A9607926AB082700A2D25E /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
-		39A9607A26AB082700A2D25E /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		39A9608C26AB087A00A2D25E /* ModalPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalPresenter.h; sourceTree = "<group>"; };
 		39A9608D26AB087A00A2D25E /* ModalPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalPresenter.m; sourceTree = "<group>"; };
 		EF5FC41D26A86795003AC036 /* ModalCustomizationFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModalCustomizationFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +41,10 @@
 		EF5FC42626A86795003AC036 /* ModalCustomizationFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalCustomizationFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5FC42B26A86795003AC036 /* ModalCustomizationFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalCustomizationFrameworkTests.m; sourceTree = "<group>"; };
 		EF5FC42D26A86795003AC036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF75E09E26AEF99600A52B13 /* FrameworkHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkHelper.h; sourceTree = "<group>"; };
+		EF75E09F26AEF9AE00A52B13 /* FrameworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FrameworkHelper.m; sourceTree = "<group>"; };
+		EF75E11426B0E45900A52B13 /* ModalCustomization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalCustomization.m; sourceTree = "<group>"; };
+		EF75E11526B0E45900A52B13 /* ModalCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalCustomization.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 		EF5FC41F26A86795003AC036 /* ModalCustomizationFramework */ = {
 			isa = PBXGroup;
 			children = (
+				EF75E11326B0E45900A52B13 /* ModalCustomization */,
+				EF75E09D26AEF94B00A52B13 /* FrameworkHelper */,
 				39A9608B26AB086E00A2D25E /* Presenter */,
 				EF5FC43826A867DD003AC036 /* Controller */,
 				EF5FC42026A86795003AC036 /* ModalCustomizationFramework.h */,
@@ -112,12 +118,28 @@
 		EF5FC43826A867DD003AC036 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				39A9607926AB082700A2D25E /* ModalViewController.h */,
-				39A9607A26AB082700A2D25E /* ModalViewController.m */,
 				39A9607726AB082700A2D25E /* ModalTransitioningDelegate.h */,
-				39A9607326AB080100A2D25E /* ModalTransitionDelegate.m */,
+				39A9607326AB080100A2D25E /* ModalTransitioningDelegate.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF75E09D26AEF94B00A52B13 /* FrameworkHelper */ = {
+			isa = PBXGroup;
+			children = (
+				EF75E09E26AEF99600A52B13 /* FrameworkHelper.h */,
+				EF75E09F26AEF9AE00A52B13 /* FrameworkHelper.m */,
+			);
+			path = FrameworkHelper;
+			sourceTree = "<group>";
+		};
+		EF75E11326B0E45900A52B13 /* ModalCustomization */ = {
+			isa = PBXGroup;
+			children = (
+				EF75E11426B0E45900A52B13 /* ModalCustomization.m */,
+				EF75E11526B0E45900A52B13 /* ModalCustomization.h */,
+			);
+			path = ModalCustomization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,8 +151,9 @@
 			files = (
 				39A9608E26AB087A00A2D25E /* ModalPresenter.h in Headers */,
 				EF5FC42E26A86795003AC036 /* ModalCustomizationFramework.h in Headers */,
+				EF75E0A126AEFA4300A52B13 /* FrameworkHelper.h in Headers */,
+				EF75E11726B0E45900A52B13 /* ModalCustomization.h in Headers */,
 				39A9607C26AB082700A2D25E /* ModalTransitioningDelegate.h in Headers */,
-				39A9607E26AB082700A2D25E /* ModalViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,8 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				39A9608F26AB087A00A2D25E /* ModalPresenter.m in Sources */,
-				39A9607F26AB082700A2D25E /* ModalViewController.m in Sources */,
-				39A9607426AB080100A2D25E /* ModalTransitionDelegate.m in Sources */,
+				EF75E11626B0E45900A52B13 /* ModalCustomization.m in Sources */,
+				EF75E0A026AEF9AE00A52B13 /* FrameworkHelper.m in Sources */,
+				39A9607426AB080100A2D25E /* ModalTransitioningDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -363,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
