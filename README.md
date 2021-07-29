@@ -15,9 +15,9 @@ adicione o link (https://github.com/ModalCustomizationFramework/ModalCustomizati
 selecione **Branch** e aperte em **next**
 
 ## Como utilizar?
-[Tutorial em Objective-C(com starter project)](https://github.com/ModalCustomizationFramework/Example)
+[Tutorial em Objective-C(com starter project)](https://github.com/ModalCustomizationFramework/Example-Objective-C)
 
-Tutorial em Swift(começando do zero).
+[Tutorial em Swift(começando do zero)](https://github.com/ModalCustomizationFramework/Example-Swift)
 
 
     
