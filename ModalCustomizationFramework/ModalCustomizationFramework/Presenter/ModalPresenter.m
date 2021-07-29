@@ -112,12 +112,12 @@
                     CGFloat heightModal = (self.containerView.bounds.size.height/2 + self.containerView.bounds.size.height/4);
                     CGRect frame = self.presentedView.frame;
                     frame.origin.y = endPoint.y + heightModal;
+                    if (frame.origin.y < heightModal) {
+                        self.auxState = YES;
+                    } else if (frame.origin.y > heightModal) {
+                        self.auxState = NO;
+                    }
                     if (self.isExpansive) {
-                        if (frame.origin.y < heightModal) {
-                            self.auxState = YES;
-                        } else if (frame.origin.y > heightModal) {
-                            self.auxState = NO;
-                        }
                         self.presentedView.frame = frame;
                     } else {
                         if (frame.origin.y > self.containerView.bounds.size.height/2) {
@@ -130,12 +130,12 @@
                     CGFloat heightModal = self.containerView.frame.size.height/2;
                     CGRect frame = self.presentedView.frame;
                     frame.origin.y = endPoint.y + heightModal;
+                    if (frame.origin.y < heightModal) {
+                        self.auxState = YES;
+                    } else if (frame.origin.y > heightModal) {
+                        self.auxState = NO;
+                    }
                     if (self.isExpansive) {
-                        if (frame.origin.y < heightModal) {
-                            self.auxState = YES;
-                        } else if (frame.origin.y > heightModal) {
-                            self.auxState = NO;
-                        }
                         self.presentedView.frame = frame;
                     } else {
                         if (frame.origin.y > self.containerView.bounds.size.height/3) {
@@ -147,7 +147,10 @@
                 case ModalScaleStateAdjustedOnce: {
                     CGRect frame = self.presentedView.frame;
                     frame.origin.y = endPoint.y;
-                    self.presentedView.frame = frame;
+                    if (frame.origin.y > 0) {
+                        self.presentedView.frame = frame;
+                    }
+                    
                 }
                     break;
             }
@@ -163,10 +166,15 @@
                 if (self.isExpansive) {
                     [self changeScale:ModalScaleStateAdjustedOnce];
                 } else {
-                    [self changeScale:self.state];
+                    if(self.isExpansive) {
+                        [self changeScale:self.state];
+                    } else {
+                        [self changeScale:self.initialState];
+                    }
                 }
             } else {
-                if (self.state == ModalScaleStateAdjustedOnce && self.isExpansive) {
+                
+                if (self.state == ModalScaleStateAdjustedOnce) {
                     switch (self.initialState) {
                         case ModalScaleStateShort: { [self changeScale:ModalScaleStateShort]; }
                             break;
@@ -174,7 +182,6 @@
                             break;
                         default: {
                             [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
-                            
                         }
                             break;
                     }
